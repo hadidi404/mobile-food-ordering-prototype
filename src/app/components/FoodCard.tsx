@@ -46,7 +46,7 @@ export const FoodCard = ({ meal, onClick }: FoodCardProps) => {
             <span>({meal.reviews})</span>
           </div>
           <span className="text-primary">•</span>
-          <span className="text-sm">${meal.price.toFixed(2)}</span>
+          <span className="text-sm">₱{meal.price.toLocaleString()}</span>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
           <MacroChip label={<Flame className="w-3 h-3" />} value={`${meal.nutrition.calories}`} color="calories" />

@@ -186,7 +186,7 @@ NutriEats is a high-fidelity mobile food ordering prototype that puts nutrition 
 ## Sample Data
 
 14 meals across 4 restaurants with realistic:
-- Prices ($9.99-$16.99)
+- Prices (₱142.5-₱240)
 - Nutrition values (based on real food data)
 - Ratings (4.6-4.9)
 - Categories (Rice Meals, Salads, High Protein, etc.)

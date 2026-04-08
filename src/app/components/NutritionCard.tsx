@@ -47,8 +47,10 @@ export const NutritionCard = ({ nutrition, className = '' }: NutritionCardProps)
   );
 };
 
+import { ReactNode } from 'react';
+
 interface MacroChipProps {
-  label: string;
+  label: React.ReactNode;
   value: number | string;
   color?: 'protein' | 'carbs' | 'fat' | 'calories';
 }

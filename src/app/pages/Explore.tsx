@@ -32,7 +32,7 @@ export const Explore = () => {
     <div className="pb-20 bg-background min-h-screen">
       {/* Header */}
       <div className="bg-white border-b border-border sticky top-0 z-10">
-        <div className="px-4 pt-12 pb-4">
+        <div className="px-4 pt-4 pb-4">
           <h1 className="text-2xl mb-4">Explore</h1>
           
           {/* Search Bar */}

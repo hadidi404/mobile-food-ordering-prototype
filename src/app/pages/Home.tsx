@@ -33,7 +33,7 @@ export const Home = () => {
   return (
     <div className="pb-20 bg-background min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-primary to-teal-600 pt-12 pb-6 px-4 rounded-b-3xl">
+      <div className="bg-gradient-to-br from-primary to-teal-600 pt-4 pb-6 px-4 rounded-b-3xl">
         <div className="flex items-center justify-between mb-6">
           <div>
             <div className="flex items-center gap-2 text-teal-100 text-sm mb-1">

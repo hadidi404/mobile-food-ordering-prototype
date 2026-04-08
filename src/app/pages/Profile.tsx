@@ -42,7 +42,7 @@ export const Profile = () => {
   return (
     <div className="pb-20 bg-background min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-primary to-teal-600 pt-12 pb-8 px-4">
+      <div className="bg-gradient-to-br from-primary to-teal-600 pt-6 pb-8 px-4">
         <div className="flex items-center gap-4 mb-4">
           <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl">
             👤
@@ -126,7 +126,7 @@ export const Profile = () => {
                 <p className="text-xs text-muted-foreground">{order.items} items</p>
               </div>
               <div className="text-right">
-                <p className="text-sm text-primary">${order.total.toFixed(2)}</p>
+                <p className="text-sm text-primary">₱{order.total.toLocaleString()}</p>
               </div>
             </div>
           ))}

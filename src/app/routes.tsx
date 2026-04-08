@@ -61,4 +61,6 @@ export const router = createBrowserRouter([
     path: '*',
     Component: NotFound,
   },
-]);
+], {
+  basename: '/mobile-food-ordering-prototype',
+});

@@ -12,7 +12,7 @@ export const Cart = () => {
   if (items.length === 0) {
     return (
       <div className="pb-20 bg-background min-h-screen">
-        <div className="px-4 pt-12 pb-4 bg-white border-b border-border">
+        <div className="px-4 pt-4 pb-4 bg-white border-b border-border">
           <h1 className="text-2xl">Cart</h1>
         </div>
         <div className="flex flex-col items-center justify-center px-4 py-16">
@@ -38,7 +38,7 @@ export const Cart = () => {
   return (
     <div className="pb-32 bg-background min-h-screen">
       {/* Header */}
-      <div className="px-4 pt-12 pb-4 bg-white border-b border-border sticky top-0 z-10">
+      <div className="px-4 pt-4 pb-4 bg-white border-b border-border sticky top-0 z-10">
         <h1 className="text-2xl mb-2">Cart</h1>
         <p className="text-sm text-muted-foreground">{totalItems} items</p>
       </div>
@@ -55,7 +55,7 @@ export const Cart = () => {
               />
               <div className="flex-1 min-w-0">
                 <h3 className="text-sm mb-1 line-clamp-1">{item.meal.name}</h3>
-                <p className="text-primary mb-2">${item.meal.price.toFixed(2)}</p>
+                  <p className="text-primary mb-2">₱{item.meal.price.toLocaleString()}</p>
                 
                 <div className="flex items-center gap-2 flex-wrap mb-2">
                   <MacroChip 
@@ -138,7 +138,7 @@ export const Cart = () => {
         <div className="flex items-center justify-between mb-3">
           <div>
             <p className="text-sm text-muted-foreground">Total</p>
-            <p className="text-2xl text-primary">${totalPrice.toFixed(2)}</p>
+            <p className="text-2xl text-primary">₱{totalPrice.toLocaleString()}</p>
           </div>
           <button
             onClick={() => navigate('/checkout')}

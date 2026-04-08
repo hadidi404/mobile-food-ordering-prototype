@@ -47,7 +47,7 @@ export const Checkout = () => {
   return (
     <div className="pb-32 bg-background min-h-screen">
       {/* Header */}
-      <div className="px-4 pt-12 pb-4 bg-white border-b border-border sticky top-0 z-10">
+      <div className="px-4 pt-4 pb-4 bg-white border-b border-border sticky top-0 z-10">
         <div className="flex items-center gap-3 mb-2">
           <button onClick={() => navigate(-1)}>
             <ArrowLeft className="w-5 h-5" />
@@ -66,22 +66,22 @@ export const Checkout = () => {
                 <span className="text-muted-foreground">
                   {item.quantity}x {item.meal.name}
                 </span>
-                <span>${(item.meal.price * item.quantity).toFixed(2)}</span>
+                <span>₱{(item.meal.price * item.quantity).toLocaleString()}</span>
               </div>
             ))}
           </div>
           <div className="pt-3 border-t border-border space-y-2">
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Subtotal</span>
-              <span>${totalPrice.toFixed(2)}</span>
+              <span>₱{totalPrice.toLocaleString()}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Delivery Fee</span>
-              <span>$2.99</span>
+              <span>₱2.99</span>
             </div>
             <div className="flex items-center justify-between pt-2 border-t border-border">
               <span>Total</span>
-              <span className="text-xl text-primary">${(totalPrice + 2.99).toFixed(2)}</span>
+              <span className="text-xl text-primary">₱{(totalPrice + 2.99).toLocaleString()}</span>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@ export const Checkout = () => {
           onClick={handlePlaceOrder}
           className="w-full bg-primary text-white py-4 rounded-xl hover:bg-primary/90 transition-colors"
         >
-          Place Order • ${(totalPrice + 2.99).toFixed(2)}
+          Place Order • ₱{(totalPrice + 2.99).toLocaleString()}
         </button>
       </div>
     </div>

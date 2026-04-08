@@ -89,7 +89,7 @@ export const FoodDetail = () => {
         <div className="mb-4">
           <div className="flex items-start justify-between mb-2">
             <h1 className="text-2xl flex-1">{meal.name}</h1>
-            <div className="text-2xl text-primary ml-4">${meal.price.toFixed(2)}</div>
+            <div className="text-2xl text-primary ml-4">₱{meal.price.toLocaleString()}</div>
           </div>
           <p className="text-muted-foreground text-sm mb-3">{meal.description}</p>
           
@@ -192,7 +192,7 @@ export const FoodDetail = () => {
             onClick={handleAddToCart}
             className="flex-1 bg-primary text-white py-3 rounded-xl hover:bg-primary/90 transition-colors"
           >
-            Add to Cart • ${(meal.price * quantity).toFixed(2)}
+            Add to Cart • ₱{(meal.price * quantity).toLocaleString()}
           </button>
         </div>
       </div>
